@@ -7,6 +7,17 @@ generator client {
   provider = "prisma-client-js"
 }
 
+generator zod {
+  provider = "zod-prisma-types"
+  output = "./zod"
+  useMultipleFiles = true
+  createInputTypes = false
+  addIncludeType = false
+  addSelectType = false
+  createOptionalDefaultValuesTypes = true
+  writeNullishInModelTypes = true
+}
+
 model User {
   id    String @id @default(cuid())
   email String @unique

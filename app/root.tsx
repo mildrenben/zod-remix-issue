@@ -9,9 +9,12 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
+import { NoteSchema } from "prisma/zod";
 
 import { getUser } from "~/session.server";
 import stylesheet from "~/tailwind.css";
+
+console.log(NoteSchema)
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: stylesheet },
